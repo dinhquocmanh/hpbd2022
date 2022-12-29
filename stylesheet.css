@@ -1096,7 +1096,7 @@ audio {
 	display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1300px) {
 	.balloons {
 		position: fixed;
 		width: 50px;
