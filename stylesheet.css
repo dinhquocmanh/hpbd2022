@@ -1093,6 +1093,8 @@ audio {
 	text-shadow: 5px 5px 5px #FFF;
 	display: none;
 }
+
+
 #b1,#b11 {
 	background-image: url('imgs/b1.png');
 }
@@ -1309,9 +1311,11 @@ audio {
     	}
     }*/
 
-.avatar{
+#avatar{
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	
+	height: 300px;
+	width: auto;
 	display: none;
 }

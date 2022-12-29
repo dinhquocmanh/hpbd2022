@@ -27,6 +27,7 @@ $('document').ready(function(){
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#play').fadeIn('slow');
 		});
+		
 	});
 	$('#play').click(function(){
 		var audio = $('.song')[0];
@@ -178,9 +179,10 @@ $('document').ready(function(){
 			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
-					$('.cake').fadeIn('fast');
+					//$('.cake').fadeIn('fast');
+					document.getElementById('avatar').style.display = "block";
 				});
-				
+				//document.getElementById('avatar').style.display = "block";
 			}
 			else{
 				msgLoop(i);
