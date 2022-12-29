@@ -116,6 +116,8 @@ $('document').ready(function(){
 		});
 	}
 
+	
+
 	$('#balloons_flying').click(function(){
 		$('.balloon-border').animate({top:-500},8000);
 		$('#b1,#b4,#b5,#b7').addClass('balloons-rotate-behaviour-one');
@@ -189,7 +191,21 @@ $('document').ready(function(){
 			$('#story').fadeIn('slow');
 		});
 	});
+
+	let slideIndex = 0;
 	
+	function showSlides() {
+		let i;
+		let slides = document.getElementsByClassName("slides");
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}
+		slides[slideIndex-1].style.display = "block";
+		setTimeout(showSlides, 3000); // Change image every 2 seconds
+	}
+
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
 		$('.cake').fadeOut('fast').promise().done(function(){
@@ -205,7 +221,7 @@ $('document').ready(function(){
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					//$('.cake').fadeIn('fast');
-					document.getElementById('avatar').style.display = "block";
+					showSlides();
 				});
 				//document.getElementById('avatar').style.display = "block";
 			}

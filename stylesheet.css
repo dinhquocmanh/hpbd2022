@@ -1324,10 +1324,9 @@ audio {
     	}
     }*/
 
-#avatar{
+.slides{
 	margin-left: auto;
 	margin-right: auto;
-	
 	height: 300px;
 	width: auto;
 	display: none;
